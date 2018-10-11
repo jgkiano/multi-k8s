@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: multi-k8s-kiano-me-tls
+spec:
+  secretName: multi-k8s-kiano-me
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: kiano.me
+  dnsNames:
+    - multi-k8s.kiano.me
+    - www.multi-k8s.kiano.me
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - multi-k8s.kiano.me
+          - www.multi-k8s.kiano.me
