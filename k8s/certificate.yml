@@ -18,5 +18,7 @@ spec:
       - http01:
           ingressClass: nginx
         domains:
-          - multi-k8s.kiano.me
-          - www.multi-k8s.kiano.me
+         - kiano.me
+         - www.kiano.me
+         - multi-k8s.kiano.me
+         - www.multi-k8s.kiano.me
