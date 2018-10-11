@@ -7,10 +7,8 @@ spec:
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: kiano.me
+  commonName: multi-k8s.kiano.me
   dnsNames:
-    - kiano.me
-    - www.kiano.me
     - multi-k8s.kiano.me
     - www.multi-k8s.kiano.me
   acme:
@@ -18,7 +16,5 @@ spec:
       - http01:
           ingressClass: nginx
         domains:
-         - kiano.me
-         - www.kiano.me
-         - multi-k8s.kiano.me
-         - www.multi-k8s.kiano.me
+          - multi-k8s.kiano.me
+          - www.multi-k8s.kiano.me
