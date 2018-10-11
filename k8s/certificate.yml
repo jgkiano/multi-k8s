@@ -9,6 +9,8 @@ spec:
     kind: ClusterIssuer
   commonName: kiano.me
   dnsNames:
+    - kiano.me
+    - www.kiano.me
     - multi-k8s.kiano.me
     - www.multi-k8s.kiano.me
   acme:
